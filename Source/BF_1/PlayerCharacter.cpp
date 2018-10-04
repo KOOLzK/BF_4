@@ -15,7 +15,7 @@
 #include "PowerObject.h"
 #include "CheckPoint.h"
 #include "VariableTypeConverter.h"
-
+#include "PlayerTrigger.h"
 
 #define EEC_InteractAble ECollisionChannel::ECC_GameTraceChannel1
 
@@ -623,6 +623,11 @@ void APlayerCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActo
 
 			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, "Dead");
 		}
+
+		if (OtherActor->IsA(APlayerTrigger::StaticClass())) {
+			APlayerTrigger* temp = Cast<APlayerTrigger>(OtherActor);
+			temp->CallTrigger();
+		}
 	}
 	//i don't know if my own messages is more trouble then its worth, i wanted to show what it hit
 	if (DisplayDebugMessages) {
@@ -735,6 +740,9 @@ void APlayerCharacter::ReloadLevel()
 	if (LoadCheckPoint) {
 		//load position in sublevel
 		SetActorLocation(CheckPointVector);
+		//make sure not to fall through floor
+		GetCapsuleComponent()->SetPhysicsLinearVelocity(FVector(0, 100, 0));
+
 	}else{
 		//load level again to reset it
 		FString a = UGameplayStatics::GetCurrentLevelName(this);
