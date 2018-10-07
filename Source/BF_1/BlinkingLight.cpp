@@ -2,9 +2,9 @@
 
 #include "BF_1.h"
 #include "BlinkingLight.h"
-#include "BehaviorTree/BehaviorTree.h"
+/*#include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "BehaviorTree/BehaviorTreeComponent.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"*/
 #include "PowerObject.h"
 //#include "LightSwitch.h"
 //#include "AI/Navigation/RecastNavMesh.h"

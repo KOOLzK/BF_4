@@ -27,10 +27,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Level)
 	FName LevelKey;
 
-	class UBlackboardComponent* BlackboardComp;
+	/*class UBlackboardComponent* BlackboardComp;
 
 	UPROPERTY(EditAnywhere, Category = Variable)
-	class UBehaviorTree* GlobalVariableAccess;
+	class UBehaviorTree* GlobalVariableAccess;*/
 
 	UPROPERTY(EditAnywhere, Category = Collision)
 	UBillboardComponent* EditorIcon;

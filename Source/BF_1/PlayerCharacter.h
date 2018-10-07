@@ -36,11 +36,11 @@ public:
 	float MyMaxStepHeight;
 
 	//old i don't know if i still need this
-	class UBlackboardComponent* BlackboardComp;
+	//class UBlackboardComponent* BlackboardComp;
 
 	//global variable access //old i don't know if i still need this
-	UPROPERTY(EditAnywhere, Category = Variable)
-	class UBehaviorTree* GlobalVariableAccess; 
+	/*UPROPERTY(EditAnywhere, Category = Variable)
+	class UBehaviorTree* GlobalVariableAccess; */
 
 	//in case the player falls through or off the map
 	UPROPERTY(EditAnywhere, Category = Variable)
@@ -159,8 +159,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = Camera)
 	class USceneComponent* RightHandOffset;
 
-	UPROPERTY(EditAnywhere, Category = Camera)
-	class APhysicsInteract* RightHandOffset2;
+	/*UPROPERTY(EditAnywhere, Category = Camera)
+	class APhysicsInteract* RightHandOffset2;*/
 
 	UPROPERTY(EditAnywhere, Category = Camera)
 	class USceneComponent* LeftHandOffset;

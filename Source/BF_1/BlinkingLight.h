@@ -33,10 +33,10 @@ public:
 	class UPointLightComponent* PointLight;
 
 	//UPROPERTY(EditAnywhere, Category = Light)
-	class UBlackboardComponent* BlackboardComp;
+	/*class UBlackboardComponent* BlackboardComp;
 
 	UPROPERTY(EditAnywhere, Category = Light)
-	class UBehaviorTree* BehaviorTree;
+	class UBehaviorTree* BehaviorTree;*/
 
 	UPROPERTY(EditAnywhere, Category = AI)
 	FName LightName;

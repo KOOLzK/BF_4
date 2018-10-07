@@ -24,7 +24,7 @@ AInteractSphere::AInteractSphere()
 
 	ZLevelRespone = -10000;
 
-	AttachDistence = 100;
+	AttachDistence = 500;
 }
 
 // Called when the game starts or when spawned

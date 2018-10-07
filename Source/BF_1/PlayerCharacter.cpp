@@ -2,19 +2,19 @@
 
 #include "BF_1.h"
 #include "PlayerCharacter.h"
-#include "LightSwitch.h"
-#include "SwingingDoor.h"
+//#include "LightSwitch.h"
+//#include "SwingingDoor.h"
 #include "InteractAble.h"
-#include "PhysicsInteract.h"
+//#include "PhysicsInteract.h"
 #include "AIPatrol.h"
-#include "BehaviorTree/BehaviorTree.h"
+/*#include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "BehaviorTree/BehaviorTreeComponent.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"*/
 //#include "MaterialInstance.generated.h"
-#include "PhysicsInteract.h"
+//#include "PhysicsInteract.h"
 #include "PowerObject.h"
 #include "CheckPoint.h"
-#include "VariableTypeConverter.h"
+//#include "VariableTypeConverter.h"
 #include "PlayerTrigger.h"
 
 #define EEC_InteractAble ECollisionChannel::ECC_GameTraceChannel1
@@ -723,11 +723,12 @@ void APlayerCharacter::Death()
 
 void APlayerCharacter::TestCodeButten()
 {
-	FString nummm = "0";
-	VariableTypeConverter Var;
+	/*FString nummm = "0";
+	//VariableTypeConverter Var;
 	int numtemp = Var.FStringToInt(nummm);
 	FString stringtemp = "test button " + FString::FromInt(numtemp);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, stringtemp); //);//
+	*/
 }
 
 void APlayerCharacter::PressToDie()

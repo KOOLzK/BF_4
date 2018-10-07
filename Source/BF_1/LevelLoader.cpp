@@ -3,9 +3,9 @@
 #include "BF_1.h"
 #include "LevelLoader.h"
 #include "PlayerCharacter.h"
-#include "BehaviorTree/BehaviorTree.h"
+/*#include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "BehaviorTree/BehaviorTreeComponent.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"*/
 
 // Sets default values
 ALevelLoader::ALevelLoader()
@@ -26,7 +26,7 @@ ALevelLoader::ALevelLoader()
 	LevelKey = "CurrentLevel";
 
 	//for the life of me i don't know why i have a Black board in this class
-	BlackboardComp = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComp"));
+	//BlackboardComp = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComp"));
 
 
 	EditorIcon = CreateDefaultSubobject<UBillboardComponent>(TEXT("Billboard"), true);
@@ -53,7 +53,7 @@ void ALevelLoader::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
-	BlackboardComp->InitializeBlackboard(*(GlobalVariableAccess->BlackboardAsset));
+	//BlackboardComp->InitializeBlackboard(*(GlobalVariableAccess->BlackboardAsset));
 
 }
 
@@ -63,7 +63,7 @@ void ALevelLoader::OnOverLapB(UPrimitiveComponent* OverlappedComponent, AActor* 
 	{
 		if (OtherActor->IsA(APlayerCharacter::StaticClass())) {
 			if (LevelName != "None") {
-				BlackboardComp->SetValueAsName(LevelKey, LevelName);
+				//BlackboardComp->SetValueAsName(LevelKey, LevelName);
 				/*APlayerCharacter* temp = Cast<APlayerCharacter>(OtherActor);
 				temp->currentLevel = LevelName;*/
 

@@ -24,7 +24,7 @@ AInteractCube::AInteractCube()
 
 	ZLevelRespone = -10000;
 
-	AttachDistence = 100;
+	AttachDistence = 500;
 
 	//HasPower = true;
 }
